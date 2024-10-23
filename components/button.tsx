@@ -26,7 +26,7 @@ type Props = {
       marginHorizontal: 5,
       alignItems: 'center',
       justifyContent: 'center',
-      padding: 3,
+      paddingHorizontal: 3,
     },
     button: {
       borderRadius: 20,
@@ -48,7 +48,8 @@ type Props = {
       textShadowColor: "black",
       position: "absolute",
       margin: 5,
-      alignItems: "center"
+      alignItems: "center",
+      paddingHorizontal: 5,
     },
     backgroundPic: {
       opacity: 0.8,
