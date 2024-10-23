@@ -5,7 +5,7 @@ import Button from '@/components/button';
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Home screen</Text>
+      <Text style={styles.text}>""</Text>
       <Button label="What is Title IX?" />
     </View>
   );
