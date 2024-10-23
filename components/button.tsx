@@ -20,9 +20,10 @@ type Props = {
 
   const styles = StyleSheet.create({
     buttonContainer: {
-      width: 200,
+      borderRadius: 20,
+      width: 150,
       height: 70,
-      marginHorizontal: 20,
+      marginHorizontal: 5,
       alignItems: 'center',
       justifyContent: 'center',
       padding: 3,
@@ -41,12 +42,13 @@ type Props = {
     },
     buttonLabel: {
       color: '#fff',
-      fontSize: 16,
+      fontSize: 14,
       fontWeight: "bold",
       textShadowRadius: 5,
       textShadowColor: "black",
       position: "absolute",
-      alignItems: 'center',
+      margin: 5,
+      alignItems: "center"
     },
     backgroundPic: {
       opacity: 0.8,
