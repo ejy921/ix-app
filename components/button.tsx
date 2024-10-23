@@ -1,14 +1,16 @@
-import { StyleSheet, Pressable, Text, View } from 'react-native';
+import { StyleSheet, Pressable, Text, View, Image } from 'react-native';
 import React from 'react';
 
 type Props = {
     label: string;
   };
 
-  export default function Button({ label }: Props) {
+  export default function Button({ label,  image }) {
     return (
       <View style={styles.buttonContainer}>
-        <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
+        <Pressable style={({pressed}) => [pressed ? { opacity: 0.8 } : {}, styles.button]} 
+                   onPress={() => alert('You pressed a button.')}>
+          <Image style={styles.backgroundPic} source={image}></Image>
           <Text style={styles.buttonLabel}>{label}</Text>
         </Pressable>
       </View>
@@ -17,8 +19,8 @@ type Props = {
 
   const styles = StyleSheet.create({
     buttonContainer: {
-      width: 250,
-      height: 150,
+      width: 200,
+      height: 70,
       marginHorizontal: 20,
       alignItems: 'center',
       justifyContent: 'center',
@@ -39,5 +41,8 @@ type Props = {
     buttonLabel: {
       color: '#fff',
       fontSize: 16,
+    },
+    backgroundPic: {
+      opacity: 1,
     },
   });
