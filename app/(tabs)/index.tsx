@@ -1,13 +1,15 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, SafeAreaView, Image } from 'react-native';
 
 import Button from '@/components/button';
+import React from 'react';
+import exampleImage from '@/assets/images/pic.png'
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>""</Text>
-      <Button label="What is Title IX?" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.text}></Text>
+      <Button image={exampleImage} label="What is Title IX?" />
+    </SafeAreaView>
   );
 }
 
@@ -21,4 +23,8 @@ const styles = StyleSheet.create({
   text: {
     color: '#fff',
   },
+  image: {
+    height: 100,
+    width: 100,
+  }
 });
