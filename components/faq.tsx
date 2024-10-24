@@ -5,34 +5,50 @@ type Props = {
     label: string;
   };
 
-  export default function Button({ question,  answer }) {
+  export default function FAQ({ question,  answer, color }) {
     return (
-      <SafeAreaView style={styles.container}>
-        <Text style={styles.question}>{question}</Text>
-        <Text style={styles.answer}>{answer}</Text>
+      <SafeAreaView style={styles.outerContainer}>
+        <SafeAreaView style={styles.middleContainer}>
+            <SafeAreaView style={[{backgroundColor: color}, styles.container]}>
+              <Text style={styles.question}>{question}</Text>
+              <Text style={styles.answer}>{answer}</Text>
+          </SafeAreaView>
+        </SafeAreaView>
       </SafeAreaView>
     );
   }
 
   const styles = StyleSheet.create({
+    outerContainer: {
+      flex: 1,
+      margin: 5,
+      backgroundColor: '#83c5be',
+      marginHorizontal: 10,
+    },
+    middleContainer: {
+      flex: 1,
+      margin: 4,
+      backgroundColor: '#fff9e8',
+    },
     container: {
         flex: 1,
-        width: 350,
-        height: 100,
         textAlign: "left",
         color: '#fff',
-        marginLeft: 25
+        margin: 4,
+        backgroundColor: '#ffddd2',
     },
     question: {
         fontSize: 16,
         fontWeight: "bold",
-        color: '#fff',
+        color: '#006d77',
         marginBottom: 10,
-        marginTop: 20,
+        marginTop: 15,
+        marginHorizontal: 20,
     },
     answer: {
         fontSize: 14,
-        color: '#fff',
-        marginBottom: 30,
+        color: '#000000',
+        marginBottom: 15,
+        marginHorizontal: 25,
     },
   });
