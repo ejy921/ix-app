@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, SafeAreaView, ScrollView} from 'react-native';
+import { Text, StyleSheet, SafeAreaView, ScrollView} from 'react-native';
 
 import Button from '@/components/button';
 import FAQ from '@/components/faq';
@@ -21,14 +21,14 @@ export default function Index() {
           <Text style={styles.titleText}>Stories</Text>
           <SafeAreaView style={styles.buttonGroupContainer}>
             <ScrollView style={styles.buttons} horizontal={true}>
-              <Button image={exampleImage} label="Sexual Assault" />
-              <Button image={exampleImage} label="Stalking" />
-              <Button image={exampleImage} label="Sexual Exploitation" />
-              <Button image={exampleImage} label="Retaliation" />
-              <Button image={exampleImage} label="Retaliation" />
-              <Button image={exampleImage} label="Sexual Coercion" />
-              <Button image={exampleImage} label="Domestic/Dating Violence" />
-              <Button image={exampleImage} label="Quid Pro Quo Sexual Harassment" />
+              <Button image={exampleImage} height={200} label="Sexual Assault" />
+              <Button image={exampleImage} height={200} label="Stalking" />
+              <Button image={exampleImage} height={200} label="Sexual Exploitation" />
+              <Button image={exampleImage} height={200} label="Retaliation" />
+              <Button image={exampleImage} height={200} label="Retaliation" />
+              <Button image={exampleImage} height={200} label="Sexual Coercion" />
+              <Button image={exampleImage} height={200} label="Domestic/Dating Violence" />
+              <Button image={exampleImage} height={200} label="Quid Pro Quo Sexual Harassment" />
               </ScrollView> 
             </SafeAreaView>  
           <Text style={[{paddingBottom: 0}, styles.titleText]}>FAQ</Text>
@@ -42,10 +42,13 @@ export default function Index() {
 
 const styles = StyleSheet.create({
   titleText: {
-    padding: 20,
+    margin: 15,
     fontSize: 24,
     color: '#006d77',
     fontWeight: 'bold',
+    textShadowColor: '#83c5be',
+    textShadowOffset: {width: 2, height: 1},
+    textShadowRadius: 4,
   },
   titleTextContainer: {
     backgroundColor: '#83c5be'
@@ -55,8 +58,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff9e8',
     justifyContent: 'center',
     fontFamily: 'Times',
-    // margin: 10,
-    // alignItems: 'center',
   },
   outerContainer: {
     flex: 1,

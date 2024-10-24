@@ -5,9 +5,9 @@ type Props = {
     label: string;
   };
 
-  export default function Button({ label,  image }) {
+  export default function Button({ label,  image, height = 90 }) {
     return (
-      <View style={styles.buttonContainer}>
+      <View style={[{height: height}, styles.buttonContainer]}>
         <Pressable style={({pressed}) => [pressed ? { opacity: 0.7 } : {}, styles.button]} 
                    onPress={() => alert('You pressed a button.')}>
           <ImageBackground style={styles.backgroundPic} source={image}>
@@ -22,7 +22,7 @@ type Props = {
     buttonContainer: {
       borderRadius: 20,
       width: 150,
-      height: 70,
+      // height: 70,
       marginHorizontal: 5,
       alignItems: 'center',
       justifyContent: 'center',

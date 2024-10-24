@@ -5,7 +5,7 @@ type Props = {
     label: string;
   };
 
-  export default function FAQ({ question,  answer, color }) {
+  export default function FAQ({ question, answer, color = '#fff9e8' }) {
     return (
       <SafeAreaView style={styles.outerContainer}>
         <SafeAreaView style={styles.middleContainer}>
@@ -24,6 +24,7 @@ type Props = {
       margin: 5,
       backgroundColor: '#83c5be',
       marginHorizontal: 10,
+      marginLeft: 20,
     },
     middleContainer: {
       flex: 1,
