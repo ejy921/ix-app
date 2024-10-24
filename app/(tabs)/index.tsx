@@ -47,8 +47,8 @@ const styles = StyleSheet.create({
     color: '#006d77',
     fontWeight: 'bold',
     textShadowColor: '#83c5be',
-    textShadowOffset: {width: 2, height: 1},
-    textShadowRadius: 4,
+    textShadowOffset: {width: 2, height: 0},
+    textShadowRadius: 2,
   },
   titleTextContainer: {
     backgroundColor: '#83c5be'

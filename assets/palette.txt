@@ -1,0 +1,5 @@
+#006d77 rgb(0, 109, 119) (dark teal)
+#83c5be rgb(131, 197, 190) (turquoise)
+#ffddd2 rgb(255, 221, 210) (light pink)
+#e7cebe rgb(231, 206, 190) (light beige)
+#fff9e8 rgb(255, 249, 232) (warm white)
