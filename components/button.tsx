@@ -1,6 +1,8 @@
 import { StyleSheet, Pressable, Text, View, ImageBackground } from 'react-native';
 import React from 'react';
 
+// tel://{number}
+
 type Props = {
     label: string;
   };
@@ -9,10 +11,10 @@ type Props = {
     return (
       <View style={[{height: height}, styles.buttonContainer]}>
         <Pressable style={({pressed}) => [pressed ? { opacity: 0.7 } : {}, styles.button]} 
-                   onPress={() => alert('You pressed a button.')}>
-          <ImageBackground style={styles.backgroundPic} source={image}>
-            <Text style={styles.buttonLabel}>{label}</Text>
-          </ImageBackground>
+                   onPress={() => alert('You pressed a button.')}>          
+            <ImageBackground style={styles.backgroundPic} source={image}>
+              <Text style={styles.buttonLabel}>{label}</Text>
+            </ImageBackground>
         </Pressable>
       </View>
     );
@@ -27,6 +29,7 @@ type Props = {
       alignItems: 'center',
       justifyContent: 'center',
       paddingHorizontal: 3,
+      //tintColor: 'grey',
     },
     button: {
       borderRadius: 20,
@@ -35,7 +38,7 @@ type Props = {
       alignItems: 'center',
       justifyContent: 'center',
       flexDirection: 'row',
-      //backgroundColor: 'blue',
+      //backgroundColor: 'grey',
     },
     buttonIcon: {
       paddingRight: 8,
